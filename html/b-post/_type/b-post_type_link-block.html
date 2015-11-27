@@ -1,0 +1,30 @@
+{block:Link}
+  <div class="post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}">
+      <div class="link-wrapper">
+          <a {Target} href="{URL}" class="link">
+              {block:Thumbnail}
+              <div class="link-thumbnail"><img src="{Thumbnail-HighRes}" alt="" /></div>
+              {/block:Thumbnail}
+              <div class="link-text-wrapper clearfix">
+                  <div class="link-text">
+                      {block:Host}
+                      <div class="link-host">{Host}</div>
+                      {/block:Host}
+                      <h2 class="link-title">{Name}</h2>
+                      {block:Excerpt}
+                      <div class="link-excerpt">{Excerpt}</div>
+                      {/block:Excerpt}
+                      {block:Author}
+                      <div class="link-author">{Author}</div>
+                      {/block:Author}
+                  </div>
+              </div>
+          </a>
+      </div>
+      {block:Description}
+      <div class="caption">
+          {Description}
+      </div>
+      {/block:Description}
+  </div>
+{/block:Link}

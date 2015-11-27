@@ -1,0 +1,31 @@
+{block:IfShowNavigation}
+  <div class="{block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}nav-wrapper content">
+    <nav class="nav-menu">
+      <ul class="inline-nav">
+        {block:HasPages}
+          {block:Pages}
+          <li class="nav-item nav-item--page">
+            <a href="{URL}" class="label">{Label}</a>
+          </li>
+          {/block:Pages}
+        {/block:HasPages}
+        
+        {block:AskEnabled}
+          <li class="nav-item nav-item--ask">
+            <a href="/ask" class="label">{AskLabel}</a>
+          </li>
+        {/block:AskEnabled}
+
+        {block:SubmissionsEnabled}
+          <li class="nav-item nav-item--submit">
+            <a href="/submit" class="label">{SubmitLabel}</a>
+          </li>
+        {/block:SubmissionsEnabled}
+        
+        <li class="nav-item nav-item--archive">
+          <a href="/archive" class="label">{lang:Archive}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+{/block:IfShowNavigation}

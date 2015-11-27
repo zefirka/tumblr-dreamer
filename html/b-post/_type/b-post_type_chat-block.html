@@ -1,0 +1,10 @@
+{block:Chat}
+  <div class="post-content">
+      {block:Title}<h2 class="title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+      <ul class="conversation">
+      {block:Lines}
+          <li class="chat-{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
+      {/block:Lines}
+      </ul>
+  </div>
+{/block:Chat}

@@ -14,9 +14,9 @@
       <meta name="description" content="The Dreamer: dreams archive of Trdat Mkrtchyan">
     {/block:Description}
 
-    <!-- Component:: 
+    <!-- Component :: 
           name: metas
-          file: html/components-hard/metas.html -->
+          file: html/metas/metas.html ::-->
     {block:Hidden}
       <meta name="if:Sliding header" content="1">
       <meta name="if:Show navigation" content="1">
@@ -41,9 +41,9 @@
         <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
     <![endif]-->
 
-    <!--. Component:: 
+    <!--. Component :: 
           name: tumblr-styles
-          file: styles/css/tumblr-styles.css -->
+          file: styles/css/tumblr-styles.css ::-->
     <style>
       /* Colors */
       body {
@@ -146,32 +146,32 @@
                 {block:IfRelatedPosts} display-related-posts{/block:IfRelatedPosts}">
 
 
-    <!--. Compound::
+    <!--. Compound ::
             name: app-nag,
             components: [
               {type: 'compounds', name: 'app-nag'},
               {type: 'components', name: 'nag-body'}
-            ] -->
+            ] ::-->
     <div class="app-nag">
 
-      <!--. Compound::
+      <!--. Compound ::
               name: app-nag-header,
               components: [
                 {type: 'compounds', name: 'nag-icond'},
                 {type: 'components', name: ['nag-ragins', 'nag-close-button']}
-              ] -->
+              ] ::-->
       <div class="app-nag-header clearfix">
           
 
 
-        <!--. Compound:: 
+        <!--. Compound :: 
                 name: nag-icons,
-                components: ['icon-ios', 'icon-andoid'] -->
+                components: ['icon-ios', 'icon-andoid'] ::-->
         <div class="app-nag-icon">
 
-          <!--. Component:: 
+          <!--. Component :: 
                   name: icon-ios
-                  file: html/components-hard/app-nag-icon-ios.html -->
+                  file: html/b-app-nag/app-nag-icon-ios.html ::-->
           <div class="app-nag-icon-ios">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
@@ -184,9 +184,9 @@
             </svg>
           </div>
 
-          <!--. Component:: 
+          <!--. Component :: 
                   name: icon-andoid 
-                  file: html/components-hard/app-nag-icon-andoid.html -->
+                  file: html/b-app-nag/app-nag-icon-andoid.html ::-->
           <div class="app-nag-icon-android">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
               <path fill="none" stroke="#FFF100" stroke-width="4" stroke-miterlimit="10" d="M463.9,209.4"></path>
@@ -200,9 +200,9 @@
         </div>
 
 
-        <!--. Component:: 
+        <!--. Component :: 
                 name: nag-ratings
-                file: html/components-hard/app-nag-ratings.html -->
+                file: html/b-app-nag/app-nag-ratings.html ::-->
         <div class="app-nag-ratings">
           <svg width="181px" height="30px" viewBox="0 0 181 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -223,9 +223,9 @@
         </div>
 
 
-        <!--. Component:: 
+        <!--. Component :: 
                 name: nag-close-button
-                file: html/components-hard/app-nag-close-button.html -->
+                file: html/b-app-nag/app-nag-close-button.html:: -->
         <div class="app-nag-close-button">
           <svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -237,9 +237,9 @@
       </div>
 
 
-      <!--. Component:: 
+      <!--. Component :: 
               name: nag-body
-              file: html/components-hard/app-nag-body.html -->
+              file: html/b-app-nag/app-nag-body.html ::-->
       <div class="app-nag-body">
         <h1 class="app-nag-callout">{lang:Engagement popover title}</h1>
         <a class="app-nag-large-button app-nag-app-store-link button blue">{lang:Engagement popover button}</a>
@@ -252,15 +252,15 @@
     <!-- PAGE --> 
     <section id="page">
 
-      <!--. Compound::
+      <!--. Compound ::
               name: b-search,
-              src: html/page-header/b-search,
-              components: ['b-search__t-logo', 'b-search__wrapper'] -->
+              src: html/b-search,
+              components: ['b-search__t-logo', 'b-search__wrapper'] ::-->
       <div class="logo-wrapper">
         
-        <!--. Component::
+        <!--. Component ::
                 name: b-search__t-logo,
-                file: html/page-header/b-search/b-search__t-logo.html -->
+                file: html/b-search/b-search__t-logo.html ::-->
         <a class="t-logo" href="https://www.tumblr.com/?referring_blog={URLEncodedName}&amp;referer=optica" target="_blank">
           <svg class="svg-logo" width="29px" height="39px" viewBox="0 0 29 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -272,9 +272,9 @@
           </svg>
         </a>
 
-        <!--. Component::
+        <!--. Component ::
                 name: b-search__wrapper,
-                file: html/page-header/b-search/b-search__wrapper.html -->
+                file: html/b-search/b-search__wrapper.html ::-->
         <div class="search-wrapper">
           <form action="/search" method="get" id="search">
             <label class="search-field-label">
@@ -286,260 +286,379 @@
       </div>
 
 
+      <!--. Compound ::
+              name: b-header,
+              group: true,
+              components: [
+                {type: 'compounds', name: 'b-header(main-element)'}] ::-->
       <div class="header-wrapper
               {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}
               {block:HideHeaderImage}no-image {/block:HideHeaderImage}
               {block:HideAvatar}avatar-hidden{/block:HideAvatar}
               {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar}">
 
+
+        <!--. Compound ::
+                name: b-header(main-element),
+                parent: b-header,
+                components: [
+                  {type: 'compounds', name: 'b-header(title-wrapper)'},
+                  {type: 'components', name: 'b-header__image'}] ::-->
         <header id="header">
           
+          <!--. Component ::
+                name: b-header__image,
+                file: html/b-header__image.html ::-->
           {block:ShowHeaderImage}
             <div class="header-image-wrapper {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}">
               <a href="/" class="header-image {block:IfSlidingHeader}parallax{/block:IfSlidingHeader} {block:StretchHeaderImage}cover{/block:StretchHeaderImage} {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}" data-bg-image="{HeaderImage}">
-                  {block:NoStretchHeaderImage}
+                {block:NoStretchHeaderImage}
                   <img src="{HeaderImage}" alt="">
-                  {/block:NoStretchHeaderImage}
+                {/block:NoStretchHeaderImage}
               </a>
               <div class="loader-bg"></div>
             </div>
           {/block:ShowHeaderImage}
 
-                  <div class="blog-title-wrapper content">
-                      <figure class="avatar-wrapper{block:IndexPage} animate{/block:IndexPage}">
-                          <a href="/" style="background-image: url({PortraitURL-128})" class="user-avatar"><img src="{PortraitURL-128}" alt="" class="print-only invisible"></a>
-                      </figure>
 
-                      <div class="title-group{block:IndexPage} animate{/block:IndexPage}">
-                          {block:ShowTitle}
-                          <h1 class="blog-title"><a href="/">{Title}</a></h1>
-                          {/block:ShowTitle}
-                          {block:ShowDescription}
-                          <span class="description">
-                              {Description}
-                          </span>
-                          {/block:ShowDescription}
 
-                          {block:IfShowNavigation}
-                              <div class="{block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}nav-wrapper content">
-                                  <nav class="nav-menu">
-                                      <ul class="inline-nav">
-                                          {block:HasPages}
-                                              {block:Pages}
-                                              <li class="nav-item nav-item--page">
-                                                  <a href="{URL}" class="label">{Label}</a>
-                                              </li>
-                                              {/block:Pages}
-                                          {/block:HasPages}
-                                          {block:AskEnabled}
-                                              <li class="nav-item nav-item--ask">
-                                                  <a href="/ask" class="label">{AskLabel}</a>
-                                              </li>
-                                          {/block:AskEnabled}
-                                          {block:SubmissionsEnabled}
-                                              <li class="nav-item nav-item--submit">
-                                                  <a href="/submit" class="label">{SubmitLabel}</a>
-                                              </li>
-                                          {/block:SubmissionsEnabled}
-                                          <li class="nav-item nav-item--archive">
-                                              <a href="/archive" class="label">{lang:Archive}</a>
-                                          </li>
-                                      </ul>
-                                  </nav>
-                              </div>
-                          {/block:IfShowNavigation}
-                      </div>
-                  </div>
-              </header>
+          <!--. Compound ::
+                    name: b-header(title-wrapper),
+                    parent: b-header,
+                    components: [
+                      {type: 'compounds', name: 'b-header(title-group)'},
+                      {type: 'components', name: 'b-header__avatar'}] ::-->
+          <div class="blog-title-wrapper content">
+            
+            <!--. Component ::
+                name: b-header__avatar,
+                file: html/b-header/b-header__avatar.html ::-->
+            <figure class="avatar-wrapper{block:IndexPage} animate{/block:IndexPage}">
+              <a href="/" style="background-image: url({PortraitURL-128})" class="user-avatar">
+                <img src="{PortraitURL-128}" alt="" class="print-only invisible">
+              </a>
+            </figure>
+
+
+            <!--. Compound ::
+                    name: b-header(title-group),
+                    group: b-header,
+                    elems: ['title', 'description', 'navigation'] ::-->
+            <div class="title-group{block:IndexPage} animate{/block:IndexPage}">
+              
+              <!--. Component ::
+                      name: b-header__title,
+                      file: html/b-header/b-header__title.html ::-->
+              {block:ShowTitle}
+                <h1 class="blog-title"><a href="/">{Title}</a></h1>
+              {/block:ShowTitle}
+
+
+              <!--. Component ::
+                      name: b-header__description,
+                      file: html/b-header/b-header__description.html ::-->
+              {block:ShowDescription}
+                <span class="description">
+                  {Description}
+                </span>
+              {/block:ShowDescription}
+
+              <!--. Component ::
+                      name: b-header__navigation,
+                      file: html/b-header/b-header__navigation.html ::-->
+              {block:IfShowNavigation}
+                <div class="{block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}nav-wrapper content">
+                  <nav class="nav-menu">
+                    <ul class="inline-nav">
+                      {block:HasPages}
+                        {block:Pages}
+                        <li class="nav-item nav-item--page">
+                          <a href="{URL}" class="label">{Label}</a>
+                        </li>
+                        {/block:Pages}
+                      {/block:HasPages}
+                      
+                      {block:AskEnabled}
+                        <li class="nav-item nav-item--ask">
+                          <a href="/ask" class="label">{AskLabel}</a>
+                        </li>
+                      {/block:AskEnabled}
+
+                      {block:SubmissionsEnabled}
+                        <li class="nav-item nav-item--submit">
+                          <a href="/submit" class="label">{SubmitLabel}</a>
+                        </li>
+                      {/block:SubmissionsEnabled}
+
+                      <li class="nav-item nav-item--archive">
+                        <a href="/archive" class="label">{lang:Archive}</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              {/block:IfShowNavigation}
+
+            </div>
+
           </div>
-          {block:SearchPage}
-              {block:NoSearchResults}
-              <div class="search-no-results content">
-                  {lang:Sorry no search results found}.
-              </div>
-              {/block:NoSearchResults}
-          {/block:SearchPage}
-          <section id="posts" class="content clearfix {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}{block:HideHeaderImage}no-image {/block:HideHeaderImage} {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar} {block:HideAvatar}avatar-hidden{/block:HideAvatar} {block:IfShowNavigation}show-nav{/block:IfShowNavigation}">
 
-              <div data-page-id="{CurrentPage}">
-                  {block:Posts inlineMediaWidth="700" inlineNestedMediaWidth="700"}
-                          <article class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="{PostID}"{/block:Date}>
-                              <div class="post-wrapper clearfix">
-                                  {block:RebloggedFrom}
-                                  <header class="reblog-header">
-                                      <a class="reblog-link" href="{ReblogParentURL}"><i class="icon-reblog"></i>{ReblogParentName}</a>
-                                  </header>
-                                  {/block:RebloggedFrom}
-                                  <section class="post">
-                                      {block:Text}
-                                      <div class="post-content">
-                                          {block:Title}<h2 class="title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-                                          {block:Body}
-                                          <div class="body-text">
-                                              {Body}
-                                          </div>
-                                          {/block:Body}
+        </header>
+      </div>
+      
+
+      <!--. Component :: 
+          name: b-page_type_search
+          file: html/b-page/_type/b-page_type_search.html ::-->
+      {block:SearchPage}
+        {block:NoSearchResults}
+          <div class="search-no-results content">
+              {lang:Sorry no search results found}.
+          </div>
+        {/block:NoSearchResults}
+      {/block:SearchPage}
+
+
+
+      <!-- POSTS -->
+      <section  id="posts" 
+                class="content clearfix 
+                {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}
+                {block:HideHeaderImage}no-image {/block:HideHeaderImage} 
+                {block:ShowAvatar} avatar-style-{AvatarShape}{/block:ShowAvatar} {block:HideAvatar} avatar-hidden{/block:HideAvatar}
+                {block:IfShowNavigation}s how-nav{/block:IfShowNavigation}">
+
+        <div data-page-id="{CurrentPage}">
+          
+          {block:Posts inlineMediaWidth="700" inlineNestedMediaWidth="700"}
+            <article 
+               class="{block:Text}text {/block:Text}
+                      {block:Photoset}photoset {/block:Photoset}
+                      {block:Photo}photo {/block:Photo}
+                      {block:RebloggedFrom}reblogged {/block:RebloggedFrom}
+                      {block:Quote}quote {/block:Quote}
+                      {block:Link}link {/block:Link}
+                      {block:Chat}chat {/block:Chat}
+                      {block:Audio}audio {/block:Audio}
+                      {block:Video}video {/block:Video}
+                      {block:Answer}answer {/block:Answer}
+                      {block:Date}not-page post-{PostID}{/block:Date} 
+                      {block:PermalinkPage} active exposed{/block:PermalinkPage}" 
+                {block:Date}data-post-id="{PostID}"{/block:Date}>
+
+                <div class="post-wrapper clearfix">
+                  
+                  <!--. Component :: 
+                          name: b-post__reblogged-from
+                          file: html/b-post/b-post__reblogged-from.html ::-->
+                  {block:RebloggedFrom}
+                    <header class="reblog-header">
+                      <a class="reblog-link" href="{ReblogParentURL}">
+                        <i class="icon-reblog"></i>{ReblogParentName}
+                      </a>
+                    </header>
+                  {/block:RebloggedFrom}
+                  
+                  <section class="post">
+                  
+                    <!--. Component :: 
+                            name: b-post_type_text-block
+                            file: html/b-post/_type/b-post_type_text-block.html ::-->
+                    {block:Text}
+                      <div class="post-content">
+                        {block:Title}<h2 class="title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                        {block:Body}
+                        <div class="body-text">
+                            {Body}
+                        </div>
+                        {/block:Body}
+                      </div>
+                    {/block:Text}
+
+                    <!--. Component :: 
+                            name: b-post_type_photo-block
+                            file: html/b-post/_type/b-post_type_photo-block.html ::-->
+                    {block:Photo}
+                      <figure class="post-content {block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}" data-photo-width="{PhotoWidth-HighRes}">
+                        <div class="photo-wrapper">
+                          <div class="photo-wrapper-inner">
+                            {LinkOpenTag}
+                              <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">
+                            {LinkCloseTag}
+                          </div>
+                        </div>
+                        {block:Caption}
+                          <figcaption class="caption">
+                            {Caption}
+                          </figcaption>
+                        {/block:Caption}
+                      </figure>
+                    {/block:Photo}
+
+                    <!--. Component :: 
+                            name: b-post_type_photoset-block
+                            file: html/b-post/_type/b-post_type_photoset-block.html ::-->
+                    {block:Photoset}
+                      <figure class="post-content photoset {block:Caption}with-caption{/block:Caption}">
+                          {Photoset}
+                          {block:Caption}
+                          <figcaption class="caption">
+                              {Caption}
+                          </figcaption>
+                          {/block:Caption}
+                      </figure>
+                    {/block:Photoset}
+
+                    <!--. Component :: 
+                            name: b-post_type_quote-block
+                            file: html/b-post/_type/b-post_type_quote-block.html ::-->
+                    {block:Quote}
+                      <div class="post-content">
+                          <blockquote class="{Length}">
+                              {Quote}
+                          </blockquote>
+                          {block:Source}
+                          <div class="source">{Source}</div>
+                          {/block:Source}
+                      </div>
+                    {/block:Quote}
+
+                    <!--. Component :: 
+                            name: b-post_type_link-block
+                            file: html/b-post/_type/b-post_type_link-block.html ::-->
+                    {block:Link}
+                      <div class="post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}">
+                          <div class="link-wrapper">
+                              <a {Target} href="{URL}" class="link">
+                                  {block:Thumbnail}
+                                  <div class="link-thumbnail"><img src="{Thumbnail-HighRes}" alt="" /></div>
+                                  {/block:Thumbnail}
+                                  <div class="link-text-wrapper clearfix">
+                                      <div class="link-text">
+                                          {block:Host}
+                                          <div class="link-host">{Host}</div>
+                                          {/block:Host}
+                                          <h2 class="link-title">{Name}</h2>
+                                          {block:Excerpt}
+                                          <div class="link-excerpt">{Excerpt}</div>
+                                          {/block:Excerpt}
+                                          {block:Author}
+                                          <div class="link-author">{Author}</div>
+                                          {/block:Author}
                                       </div>
-                                      {/block:Text}
+                                  </div>
+                              </a>
+                          </div>
+                          {block:Description}
+                          <div class="caption">
+                              {Description}
+                          </div>
+                          {/block:Description}
+                      </div>
+                    {/block:Link}
 
-                                      {block:Photo}
-                                      <figure class="post-content {block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}" data-photo-width="{PhotoWidth-HighRes}">
-                                          <div class="photo-wrapper">
-                                              <div class="photo-wrapper-inner">
-                                                  {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">{LinkCloseTag}
-                                              </div>
-                                          </div>
-                                          {block:Caption}
-                                          <figcaption class="caption">
-                                              {Caption}
-                                          </figcaption>
-                                          {/block:Caption}
-                                      </figure>
-                                      {/block:Photo}
+                    <!--. Component :: 
+                            name: b-post_type_chat-block
+                            file: html/b-post/_type/b-post_type_chat-block.html ::-->
+                    {block:Chat}
+                      <div class="post-content">
+                          {block:Title}<h2 class="title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                          <ul class="conversation">
+                          {block:Lines}
+                              <li class="chat-{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
+                          {/block:Lines}
+                          </ul>
+                      </div>
+                    {/block:Chat}
 
-                                      {block:Photoset}
-                                      <figure class="post-content photoset {block:Caption}with-caption{/block:Caption}">
-                                          {Photoset}
-                                          {block:Caption}
-                                          <figcaption class="caption">
-                                              {Caption}
-                                          </figcaption>
-                                          {/block:Caption}
-                                      </figure>
-                                      {/block:Photoset}
+                    <!--. Component :: 
+                            name: b-post_type_audio-block
+                            file: html/b-post/_type/b-post_type_audio-block.html ::-->
+                    {block:Audio}
+                      <div class="post-content {block:Caption}with-caption{/block:Caption}">
+                          <div class="audio_container">
+                              {block:AudioEmbed}
+                                  {AudioEmbed color="white"}
+                              {/block:AudioEmbed}
+                          </div>
+                          {block:Caption}
+                          <div class="caption">
+                              {Caption}
+                          </div>
+                          {/block:Caption}
+                      </div>
+                    {/block:Audio}
 
-                                      {block:Quote}
-                                      <div class="post-content">
-                                          <blockquote class="{Length}">
-                                              {Quote}
-                                          </blockquote>
-                                          {block:Source}
-                                          <div class="source">{Source}</div>
-                                          {/block:Source}
-                                      </div>
-                                      {/block:Quote}
+                    <!--. Component :: 
+                            name: b-post_type_video-block
+                            file: html/b-post/_type/b-post_type_video-block.html ::-->
+                    {block:Video}
+                      <figure class="post-content {block:Caption}with-caption{/block:Caption}">
+                          <div class="video-wrapper">
+                              {Video-700}
+                          </div>
+                          {block:Caption}
+                          <figcaption class="caption">
+                              {Caption}
+                          </figcaption>
+                          {/block:Caption}
+                      </figure>
+                    {/block:Video}
 
-
-                                      {block:Link}
-                                      <div class="post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}">
-                                          <div class="link-wrapper">
-                                              <a {Target} href="{URL}" class="link">
-                                                  {block:Thumbnail}
-                                                  <div class="link-thumbnail"><img src="{Thumbnail-HighRes}" alt="" /></div>
-                                                  {/block:Thumbnail}
-                                                  <div class="link-text-wrapper clearfix">
-                                                      <div class="link-text">
-                                                          {block:Host}
-                                                          <div class="link-host">{Host}</div>
-                                                          {/block:Host}
-                                                          <h2 class="link-title">{Name}</h2>
-                                                          {block:Excerpt}
-                                                          <div class="link-excerpt">{Excerpt}</div>
-                                                          {/block:Excerpt}
-                                                          {block:Author}
-                                                          <div class="link-author">{Author}</div>
-                                                          {/block:Author}
-                                                      </div>
-                                                  </div>
-                                              </a>
-                                          </div>
-                                          {block:Description}
-                                          <div class="caption">
-                                              {Description}
-                                          </div>
-                                          {/block:Description}
-                                      </div>
-                                      {/block:Link}
-
-
-                                      {block:Chat}
-                                      <div class="post-content">
-                                          {block:Title}<h2 class="title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-                                          <ul class="conversation">
-                                          {block:Lines}
-                                              <li class="chat-{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
-                                          {/block:Lines}
-                                          </ul>
-                                      </div>
-                                      {/block:Chat}
+                    <!--. Component :: 
+                            name: b-post_type_answer-block
+                            file: html/b-post/_type/b-post_type_answer-block.html ::-->
+                    {block:Answer}
+                      <div class="post-content">
+                          <div class="note-item note-item-asker">
+                              <div class="text">
+                                  <p class="asker"><strong>{Asker}</strong> asked:</p>
+                                  <div class="asker-question">
+                                      {Question}
+                                  </div>
+                              </div>
+                              <div class="avatar">
+                                  <img class="asker-avatar" src="{AskerPortraitURL-96}" alt="">
+                              </div>
+                          </div>
 
 
-                                      {block:Audio}
-                                      <div class="post-content {block:Caption}with-caption{/block:Caption}">
-                                          <div class="audio_container">
-                                              {block:AudioEmbed}
-                                                  {AudioEmbed color="white"}
-                                              {/block:AudioEmbed}
-                                          </div>
-                                          {block:Caption}
-                                          <div class="caption">
-                                              {Caption}
-                                          </div>
-                                          {/block:Caption}
-                                      </div>
-                                      {/block:Audio}
+                          {block:Answerer}
+                            <div class="note-item note-item-answerer">
+                                <div class="text">
+                                    <p class="answerer"><strong>{Answerer}</strong> answered:</p>
+                                    <div class="answerer-answer">
+                                        {Answer}
+                                    </div>
+                                </div>
+                                <div class="avatar">
+                                    <img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="">
+                                </div>
+                            </div>
+                          {/block:Answerer}
 
+                          <div class="replies">
+                              {Replies}
+                          </div>
+                      </div>
+                    {/block:Answer}
 
-                                      {block:Video}
-                                      <figure class="post-content {block:Caption}with-caption{/block:Caption}">
-                                          <div class="video-wrapper">
-                                              {Video-700}
-                                          </div>
-                                          {block:Caption}
-                                          <figcaption class="caption">
-                                              {Caption}
-                                          </figcaption>
-                                          {/block:Caption}
-                                      </figure>
-                                      {/block:Video}
-
-                                      {block:Answer}
-                                      <div class="post-content">
-                                          <div class="note-item note-item-asker">
-                                              <div class="text">
-                                                  <p class="asker"><strong>{Asker}</strong> asked:</p>
-                                                  <div class="asker-question">
-                                                      {Question}
-                                                  </div>
-                                              </div>
-                                              <div class="avatar">
-                                                  <img class="asker-avatar" src="{AskerPortraitURL-96}" alt="">
-                                              </div>
-                                          </div>
-
-                                          {block:Answerer}
-                                          <div class="note-item note-item-answerer">
-                                              <div class="text">
-                                                  <p class="answerer"><strong>{Answerer}</strong> answered:</p>
-                                                  <div class="answerer-answer">
-                                                      {Answer}
-                                                  </div>
-                                              </div>
-                                              <div class="avatar">
-                                                  <img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="">
-                                              </div>
-                                          </div>
-                                          {/block:Answerer}
-
-                                          <div class="replies">
-                                              {Replies}
-                                          </div>
-                                      </div>
-                                      {/block:Answer}
-
-                                      <section class="inline-meta post-extra{block:RebloggedFrom} has-reblog{/block:RebloggedFrom}{block:ContentSource} has-source{/block:ContentSource}{block:HasTags} has-tags{/block:HasTags}">
-                                          {block:RebloggedFrom}
-                                              <a class="meta-item reblog-link" href="{ReblogParentURL}"><i class="icon-reblog"></i>{ReblogParentName}</a>
-                                          {/block:RebloggedFrom}
-                                          {block:ContentSource}
-                                              <a class="meta-item source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
-                                          {/block:ContentSource}
-                                          {block:HasTags}
-                                              {block:Tags}
-                                                   <a class="meta-item tag-link" href="{TagURL}">{Tag}</a>
-                                              {/block:Tags}
-                                          {/block:HasTags}
-                                      </section>
+                    <!--. Component :: 
+                            name: b-post__inline-meta
+                            file: html/b-post/b-post__inline-meta.html ::-->
+                    <section 
+                      class="inline-meta post-extra{block:RebloggedFrom} has-reblog{/block:RebloggedFrom}{block:ContentSource} has-source{/block:ContentSource}{block:HasTags} has-tags{/block:HasTags}">
+                        {block:RebloggedFrom}
+                            <a class="meta-item reblog-link" href="{ReblogParentURL}"><i class="icon-reblog"></i>{ReblogParentName}</a>
+                        {/block:RebloggedFrom}
+                        {block:ContentSource}
+                            <a class="meta-item source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
+                        {/block:ContentSource}
+                        {block:HasTags}
+                            {block:Tags}
+                                 <a class="meta-item tag-link" href="{TagURL}">{Tag}</a>
+                            {/block:Tags}
+                        {/block:HasTags}
+                    </section>
 
                                   </section>
 

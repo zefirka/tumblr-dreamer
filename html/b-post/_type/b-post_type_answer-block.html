@@ -1,0 +1,34 @@
+{block:Answer}
+  <div class="post-content">
+      <div class="note-item note-item-asker">
+          <div class="text">
+              <p class="asker"><strong>{Asker}</strong> asked:</p>
+              <div class="asker-question">
+                  {Question}
+              </div>
+          </div>
+          <div class="avatar">
+              <img class="asker-avatar" src="{AskerPortraitURL-96}" alt="">
+          </div>
+      </div>
+
+
+      {block:Answerer}
+        <div class="note-item note-item-answerer">
+            <div class="text">
+                <p class="answerer"><strong>{Answerer}</strong> answered:</p>
+                <div class="answerer-answer">
+                    {Answer}
+                </div>
+            </div>
+            <div class="avatar">
+                <img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="">
+            </div>
+        </div>
+      {/block:Answerer}
+
+      <div class="replies">
+          {Replies}
+      </div>
+  </div>
+{/block:Answer}

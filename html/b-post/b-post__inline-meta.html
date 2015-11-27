@@ -1,0 +1,14 @@
+<section 
+  class="inline-meta post-extra{block:RebloggedFrom} has-reblog{/block:RebloggedFrom}{block:ContentSource} has-source{/block:ContentSource}{block:HasTags} has-tags{/block:HasTags}">
+    {block:RebloggedFrom}
+        <a class="meta-item reblog-link" href="{ReblogParentURL}"><i class="icon-reblog"></i>{ReblogParentName}</a>
+    {/block:RebloggedFrom}
+    {block:ContentSource}
+        <a class="meta-item source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
+    {/block:ContentSource}
+    {block:HasTags}
+        {block:Tags}
+             <a class="meta-item tag-link" href="{TagURL}">{Tag}</a>
+        {/block:Tags}
+    {/block:HasTags}
+</section>

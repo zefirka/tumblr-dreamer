@@ -1,0 +1,10 @@
+{block:ShowHeaderImage}
+  <div class="header-image-wrapper {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}">
+    <a href="/" class="header-image {block:IfSlidingHeader}parallax{/block:IfSlidingHeader} {block:StretchHeaderImage}cover{/block:StretchHeaderImage} {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}" data-bg-image="{HeaderImage}">
+      {block:NoStretchHeaderImage}
+        <img src="{HeaderImage}" alt="">
+      {/block:NoStretchHeaderImage}
+    </a>
+    <div class="loader-bg"></div>
+  </div>
+{/block:ShowHeaderImage}
