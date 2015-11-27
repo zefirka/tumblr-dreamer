@@ -14,20 +14,7 @@
       <meta name="description" content="The Dreamer: dreams archive of Trdat Mkrtchyan">
     {/block:Description}
 
-    <!-- Component:: 
-          name: metas
-          file: html/components-hard/metas.html -->
-    {block:Hidden}
-      <meta name="if:Sliding header" content="1">
-      <meta name="if:Show navigation" content="1">
-      <meta name="if:Endless scrolling" content="1">
-      <meta name="select:Layout" content="regular" title="Regular">
-      <meta name="select:Layout" content="narrow" title="Narrow">
-      <meta name="select:Layout" content="grid" title="Grid">
-      <meta name="if:Related Posts" content="1">
-      <meta name="text:Disqus shortname" content="">
-      <meta name="text:Google analytics ID" content="">
-    {/block:Hidden}
+    {{metas}}
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="{Favicon}">
@@ -41,101 +28,10 @@
         <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
     <![endif]-->
 
-    <!--. Component:: 
-          name: tumblr-styles
-          file: styles/css/tumblr-styles.css -->
-    <style>
-      /* Colors */
-      body {
-          background: {BackgroundColor};
-      }
+    {{tumblr-styles}}
 
-      .blog-title {
-          font-family: {TitleFont}, "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
-          font-weight: {TitleFontWeight};
-      }
-
-      .blog-title a,
-      .description,
-      .search-no-results {
-          color: {TitleColor};
-      }
-
-      a {
-          color: {AccentColor};
-      }
-
-      #pagination a,
-      .nav-wrapper .nav-item .label {
-          color: {AccentColor};
-      }
-
-      #pagination a.next:after {
-          border-left-color: {AccentColor};
-      }
-
-      #pagination a.previous:after {
-          border-right-color: {AccentColor};
-      }
-
-      .loader .loader-bar {
-          background-color: {TitleColor};
-      }
-
-      .header-image.cover {
-          background-image: url({HeaderImage});
-      }
-
-      .user-avatar {
-          background-color: {BackgroundColor};
-          border-color: {BackgroundColor};
-      }
-
-      .avatar-style-square .user-avatar {
-          -webkit-box-shadow: 0 0 0 4px {BackgroundColor};
-          box-shadow: 0 0 0 4px {BackgroundColor};
-      }
-
-      .no-header-image .logo-wrapper,
-      .contain-header-image .logo-wrapper {
-          color: {AccentColor};
-      }
-
-      /* Adjust logo for light accents on light backgrounds */
-      .light-on-light.no-header-image .logo-wrapper,
-      .light-on-light.contain-header-image .logo-wrapper {
-          color: #444;
-      }
-
-      /* Adjust logo for dark accents on dark backgrounds */
-      .dark-on-dark.no-header-image .logo-wrapper,
-      .dark-on-dark.contain-header-image .logo-wrapper {
-          color: #fff;
-      }
-
-      .related-posts-wrapper > h2 {
-          color: {TitleColor};
-      }
-
-      @media screen and (max-device-width: 568px) {
-          .header-image.cover {
-              background-image: url({HeaderImage-640});
-              -webkit-background-size: cover;
-              background-size: cover;
-          }
-
-          .avatar-style-square .user-avatar {
-              -webkit-box-shadow: 0 0 0 3px {BackgroundColor};
-              -moz-box-shadow: 0 0 0 3px {BackgroundColor};
-              box-shadow: 0 0 0 3px {BackgroundColor};
-          }
-
-      }
-
-      /* Custom CSS */
-      {CustomCSS}
-    </style>
   </head>
+
   <body data-urlencoded-name="{URLEncodedName}" 
         class=" {select:Layout}
                 {block:IndexPage}index-page{/block:IndexPage}
@@ -146,32 +42,32 @@
                 {block:IfRelatedPosts} display-related-posts{/block:IfRelatedPosts}">
 
 
-    <!--. Compound::
-            name: app-nag,
-            components: [
-              {type: 'compounds', name: 'app-nag'},
-              {type: 'components', name: 'nag-body'}
-            ] -->
+    <!-- Compound:
+          name: app-nag,
+          components: [
+            {type: 'compounds', name: 'app-nag'},
+            {type: 'components', name: 'nag-body'}
+          ] -->
     <div class="app-nag">
 
-      <!--. Compound::
-              name: app-nag-header,
-              components: [
-                {type: 'compounds', name: 'nag-icond'},
-                {type: 'components', name: ['nag-ragins', 'nag-close-button']}
-              ] -->
+      <!-- Compound:
+            name: app-nag-header,
+            components: [
+              {type: 'compounds', name: 'nag-icond'},
+              {type: 'components', name: ['nag-ragins', 'nag-close-button']}
+            ] -->
       <div class="app-nag-header clearfix">
           
 
 
-        <!--. Compound:: 
+        <!-- Compound: 
                 name: nag-icons,
                 components: ['icon-ios', 'icon-andoid'] -->
         <div class="app-nag-icon">
 
-          <!--. Component:: 
-                  name: icon-ios
-                  file: html/components-hard/app-nag-icon-ios.html -->
+          <!-- Component:: 
+                name: icon-ios
+                file: components-hard/app-nag-icon-ios.html -->
           <div class="app-nag-icon-ios">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
@@ -184,9 +80,9 @@
             </svg>
           </div>
 
-          <!--. Component:: 
-                  name: icon-andoid 
-                  file: html/components-hard/app-nag-icon-andoid.html -->
+          <!-- Component:: 
+                name: icon-andoid 
+                file: components-hard/app-nag-icon-andoid.html -->
           <div class="app-nag-icon-android">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
               <path fill="none" stroke="#FFF100" stroke-width="4" stroke-miterlimit="10" d="M463.9,209.4"></path>
@@ -200,9 +96,9 @@
         </div>
 
 
-        <!--. Component:: 
+        <!-- Component:: 
                 name: nag-ratings
-                file: html/components-hard/app-nag-ratings.html -->
+                file: components-hard/app-nag-ratings.html -->
         <div class="app-nag-ratings">
           <svg width="181px" height="30px" viewBox="0 0 181 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -223,9 +119,9 @@
         </div>
 
 
-        <!--. Component:: 
+         <!-- Component:: 
                 name: nag-close-button
-                file: html/components-hard/app-nag-close-button.html -->
+                file: components-hard/app-nag-close-button.html -->
         <div class="app-nag-close-button">
           <svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -237,30 +133,19 @@
       </div>
 
 
-      <!--. Component:: 
-              name: nag-body
-              file: html/components-hard/app-nag-body.html -->
+      <!-- Component:: 
+            name: nag-body
+            file: components-hard/app-nag-body.html -->
       <div class="app-nag-body">
         <h1 class="app-nag-callout">{lang:Engagement popover title}</h1>
         <a class="app-nag-large-button app-nag-app-store-link button blue">{lang:Engagement popover button}</a>
         <a class="app-nag-large-button app-nag-app-store-deny">{lang:Dismiss engagement popover}</a>
       </div>
 
-    </div>
+    </div> <!-- end of nag-compound -->
 
-
-    <!-- PAGE --> 
     <section id="page">
-
-      <!--. Compound::
-              name: b-search,
-              src: html/page-header/b-search,
-              components: ['b-search__t-logo', 'b-search__wrapper'] -->
       <div class="logo-wrapper">
-        
-        <!--. Component::
-                name: b-search__t-logo,
-                file: html/page-header/b-search/b-search__t-logo.html -->
         <a class="t-logo" href="https://www.tumblr.com/?referring_blog={URLEncodedName}&amp;referer=optica" target="_blank">
           <svg class="svg-logo" width="29px" height="39px" viewBox="0 0 29 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -273,8 +158,8 @@
         </a>
 
         <!--. Component::
-                name: b-search__wrapper,
-                file: html/page-header/b-search/b-search__wrapper.html -->
+                name: search-wrapper,
+                file: html/components-body/search-wrapper.html -->
         <div class="search-wrapper">
           <form action="/search" method="get" id="search">
             <label class="search-field-label">
@@ -285,25 +170,23 @@
 
       </div>
 
-
-      <div class="header-wrapper
+          <div class="header-wrapper
               {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}
               {block:HideHeaderImage}no-image {/block:HideHeaderImage}
               {block:HideAvatar}avatar-hidden{/block:HideAvatar}
               {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar}">
 
-        <header id="header">
-          
-          {block:ShowHeaderImage}
-            <div class="header-image-wrapper {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}">
-              <a href="/" class="header-image {block:IfSlidingHeader}parallax{/block:IfSlidingHeader} {block:StretchHeaderImage}cover{/block:StretchHeaderImage} {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}" data-bg-image="{HeaderImage}">
-                  {block:NoStretchHeaderImage}
-                  <img src="{HeaderImage}" alt="">
-                  {/block:NoStretchHeaderImage}
-              </a>
-              <div class="loader-bg"></div>
-            </div>
-          {/block:ShowHeaderImage}
+              <header id="header">
+                  {block:ShowHeaderImage}
+                  <div class="header-image-wrapper {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}">
+                      <a href="/" class="header-image {block:IfSlidingHeader}parallax{/block:IfSlidingHeader} {block:StretchHeaderImage}cover{/block:StretchHeaderImage} {block:NoStretchHeaderImage}contain{/block:NoStretchHeaderImage}" data-bg-image="{HeaderImage}">
+                          {block:NoStretchHeaderImage}
+                          <img src="{HeaderImage}" alt="">
+                          {/block:NoStretchHeaderImage}
+                      </a>
+                      <div class="loader-bg"></div>
+                  </div>
+                  {/block:ShowHeaderImage}
 
                   <div class="blog-title-wrapper content">
                       <figure class="avatar-wrapper{block:IndexPage} animate{/block:IndexPage}">
