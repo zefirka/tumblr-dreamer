@@ -660,70 +660,89 @@
                         {/block:HasTags}
                     </section>
 
-                                  </section>
+                  </section>
 
-                                  {block:Date}
-                                  <section class="panel">
-                                      <footer class="post-footer">
-                                          <section class="inline-meta date-notes">
-                                              <div class="date-note-wrapper">
-                                                  {block:NoteCount}
-                                                      <span class="notes-pop-container">
-                                                          <a href="{Permalink}#notes" class="meta-item post-notes">{NoteCountWithLabel}</a>
-                                                          {block:PermalinkPage}
-                                                              {block:PostNotes}
-                                                                  <section id="notes" class="notes-wrapper clearfix">
-                                                                      <div class="notes-wrapper-header">
-                                                                          <span class="notes-wrapper-header-close">
-                                                                              <svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                                                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                                      <path d="M12.510351,14.6860639 L0,27.1964147 L2.175713,29.3721278 L14.686064,16.8617771 L27.196415,29.3721278 L29.372128,27.1964147 L16.861777,14.6860639 L29.372128,2.1757132 L27.196415,0 L14.686064,12.5103507 L2.175713,0 L0,2.1757132 L12.510351,14.6860639 L12.510351,14.6860639 Z" fill="#D3D3D3"></path>
-                                                                                  </g>
-                                                                              </svg>
-                                                                          </span>
-                                                                          {NoteCountWithLabel}
-                                                                      </div>
-                                                                      {PostNotes-64}
-                                                                  </section>
-                                                              {/block:PostNotes}
-                                                          {/block:PermalinkPage}
-                                                      </span>
-                                                  {/block:NoteCount}
-                                                  <a href="{Permalink}" title="{TimeAgo}" class="meta-item post-date">{ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}</a>
-                                              </div>
-                                          </section>
 
-                                          <section class="post-controls">
-                                              <div class="controls-wrapper">
-                                                  <div class="control share-control">
-                                                      <nav class="pop">
-                                                          <a href="#" class="share selector icon-export"></a>
-                                                          <div class="pop-menu share-menu south" id="share_{PostID}">
-                                                              <ul>
-                                                                  <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">{lang:Open in app}</a></li>
-                                                                  <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">{lang:Facebook}</a></li>
-                                                                  <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">{lang:Tweet}</a></li>
-                                                                  {block:Photo}
-                                                                      <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
-                                                                  {/block:Photo}
-                                                                  {block:Video}{block:VideoThumbnail}
-                                                                      <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={VideoThumbnailURL}&amp;is_video=true" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
-                                                                  {/block:VideoThumbnail}{/block:Video}
-                                                                  <li><a href="https://reddit.com/submit?url={URLEncodedPermalink}" class="share-item reddit" target="_blank">{lang:Reddit}</a></li>
-                                                                  <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">{lang:Mail}</a></li>
-                                                                  <li><a href="{EmbedUrl}" class="share-item permalink">{lang:Embed}</a></li>
-                                                                  <li><a href="{Permalink}" class="share-item permalink">{lang:Permalink} <i class="icon-arrow_carrot_right"></i></a></li>
-                                                              </ul>
-                                                          </div>
-                                                      </nav>
-                                                  </div>
-                                                  <div class="control reblog-control">{ReblogButton size="21" color="black"}</div>
-                                                  <div class="control like-control">{LikeButton size="20" color="black"}</div>
-                                              </div>
-                                          </section>
-                                      </footer>
-                                  </section>
-                                  {/block:Date}
+                  {block:Date}
+                    <section class="panel">
+                      <footer class="post-footer">
+
+                        <!--. Compound :: 
+                                    name: date-notes
+                                    components: ['note-count', 'permalink'] ::-->
+                        <section class="inline-meta date-notes">
+                          <div class="date-note-wrapper">
+                            
+                            <!--. Component :: 
+                                    name: note-count
+                                    file: html/b-post-footer/b-post-footer__note-count.html ::-->
+                            {block:NoteCount}
+                              <span class="notes-pop-container">
+                                <a href="{Permalink}#notes" class="meta-item post-notes">{NoteCountWithLabel}</a>
+                                {block:PermalinkPage}
+                                  {block:PostNotes}
+                                    <section id="notes" class="notes-wrapper clearfix">
+                                        <div class="notes-wrapper-header">
+                                            <span class="notes-wrapper-header-close">
+                                                <svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <path d="M12.510351,14.6860639 L0,27.1964147 L2.175713,29.3721278 L14.686064,16.8617771 L27.196415,29.3721278 L29.372128,27.1964147 L16.861777,14.6860639 L29.372128,2.1757132 L27.196415,0 L14.686064,12.5103507 L2.175713,0 L0,2.1757132 L12.510351,14.6860639 L12.510351,14.6860639 Z" fill="#D3D3D3"></path>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                            {NoteCountWithLabel}
+                                        </div>
+                                        {PostNotes-64}
+                                    </section>
+                                  {/block:PostNotes}
+                                {/block:PermalinkPage}
+                              </span>
+                            {/block:NoteCount}
+
+                            <!--. Component :: 
+                                    name: permalink
+                                    file: html/b-post-footer/b-post-footer__permalink.html ::-->
+                            <a href="{Permalink}" title="{TimeAgo}" class="meta-item post-date">
+                              {ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}
+                            </a>
+                          </div>
+                        </section>
+
+                        <section class="post-controls">
+                          <div class="controls-wrapper">
+                            <div class="control share-control">
+                              
+                              <nav class="pop">
+                                <a href="#" class="share selector icon-export"></a>
+                                  <div class="pop-menu share-menu south" id="share_{PostID}">
+                                    <ul>
+                                        <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">{lang:Open in app}</a></li>
+                                        <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">{lang:Facebook}</a></li>
+                                        <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">{lang:Tweet}</a></li>
+                                        {block:Photo}
+                                            <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
+                                        {/block:Photo}
+                                        {block:Video}{block:VideoThumbnail}
+                                            <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={VideoThumbnailURL}&amp;is_video=true" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
+                                        {/block:VideoThumbnail}{/block:Video}
+                                        <li><a href="https://reddit.com/submit?url={URLEncodedPermalink}" class="share-item reddit" target="_blank">{lang:Reddit}</a></li>
+                                        <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">{lang:Mail}</a></li>
+                                        <li><a href="{EmbedUrl}" class="share-item permalink">{lang:Embed}</a></li>
+                                        <li><a href="{Permalink}" class="share-item permalink">{lang:Permalink} <i class="icon-arrow_carrot_right"></i></a></li>
+                                    </ul>
+                                  </div>
+                                </nav>
+
+                              </div>
+                              <div class="control reblog-control">{ReblogButton size="21" color="black"}</div>
+                              <div class="control like-control">{LikeButton size="20" color="black"}</div>
+                            </div>
+                          </section>
+                        </footer>
+                      </section>
+                    {/block:Date}
+
+
                                   {block:PermalinkPage}
 
                                       {block:Date}
