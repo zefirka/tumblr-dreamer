@@ -1,0 +1,237 @@
+{block:IfRelatedPosts}
+  {block:RelatedPosts}
+          <section class="related-posts-wrapper">
+              <h2>{lang:More you might like}</h2>
+              <div class="related-posts grid">
+              {block:Posts inlineMediaWidth="700" inlineNestedMediaWidth="700"}
+                      <article class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="{PostID}"{/block:Date}>
+                          <div class="post-wrapper clearfix">
+                              {block:RebloggedFrom}
+                              <header class="reblog-header">
+                                  <a class="reblog-link" href="{ReblogParentURL}"><i class="icon-reblog"></i>{ReblogParentName}</a>
+                              </header>
+                              {/block:RebloggedFrom}
+                              <section class="post">
+                                  {block:Text}
+                                  <div class="post-content">
+                                      {block:Title}<h2 class="title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                                      {block:Body}
+                                      <div class="body-text">
+                                          {Body}
+                                      </div>
+                                      {/block:Body}
+                                  </div>
+                                  {/block:Text}
+
+                                  {block:Photo}
+                                  <figure class="post-content {block:HighRes}high-res{/block:HighRes}{block:Caption} with-caption{/block:Caption}" data-photo-width="{PhotoWidth-HighRes}">
+                                      <div class="photo-wrapper">
+                                          <div class="photo-wrapper-inner">
+                                              <a href="{Permalink}"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}"></a>
+                                          </div>
+                                      </div>
+                                      {block:Caption}
+                                      <figcaption class="caption">
+                                          {Caption}
+                                      </figcaption>
+                                      {/block:Caption}
+                                  </figure>
+                                  {/block:Photo}
+
+                                  {block:Photoset}
+                                  <figure class="post-content photoset {block:Caption}with-caption{/block:Caption}">
+                                      {Photoset}
+                                      {block:Caption}
+                                      <figcaption class="caption">
+                                          {Caption}
+                                      </figcaption>
+                                      {/block:Caption}
+                                  </figure>
+                                  {/block:Photoset}
+
+                                  {block:Quote}
+                                  <div class="post-content">
+                                      <blockquote class="{Length}">
+                                          {Quote}
+                                      </blockquote>
+                                      {block:Source}
+                                      <div class="source">{Source}</div>
+                                      {/block:Source}
+                                  </div>
+                                  {/block:Quote}
+
+
+                                  {block:Link}
+                                  <div class="post-content{block:Description} with-caption{/block:Description}{block:Thumbnail} with-thumbnail{/block:Thumbnail}">
+                                      <div class="link-wrapper">
+                                          <a {Target} href="{URL}" class="link">
+                                              {block:Thumbnail}
+                                              <div class="link-thumbnail"><img src="{Thumbnail-HighRes}" alt="" /></div>
+                                              {/block:Thumbnail}
+                                              <div class="link-text-wrapper clearfix">
+                                                  <div class="link-text">
+                                                      {block:Host}
+                                                      <div class="link-host">{Host}</div>
+                                                      {/block:Host}
+                                                      <h2 class="link-title">{Name}</h2>
+                                                      {block:Excerpt}
+                                                      <div class="link-excerpt">{Excerpt}</div>
+                                                      {/block:Excerpt}
+                                                      {block:Author}
+                                                      <div class="link-author">{Author}</div>
+                                                      {/block:Author}
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </div>
+                                      {block:Description}
+                                      <div class="caption">
+                                          {Description}
+                                      </div>
+                                      {/block:Description}
+                                  </div>
+                                  {/block:Link}
+
+                                  {block:Chat}
+                                  <div class="post-content">
+                                      {block:Title}<h2 class="title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                                      <ul class="conversation">
+                                      {block:Lines}
+                                          <li class="chat-{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
+                                      {/block:Lines}
+                                      </ul>
+                                  </div>
+                                  {/block:Chat}
+
+                                  {block:Audio}
+                                  <div class="post-content {block:Caption}with-caption{/block:Caption}">
+                                      <div class="audio_container">
+                                          {block:AudioEmbed}
+                                              {AudioEmbed color="white"}
+                                          {/block:AudioEmbed}
+                                      </div>
+                                      {block:Caption}
+                                      <div class="caption">
+                                          {Caption}
+                                      </div>
+                                      {/block:Caption}
+                                  </div>
+                                  {/block:Audio}
+
+                                  {block:Video}
+                                  <figure class="post-content {block:Caption}with-caption{/block:Caption}">
+                                      <div class="video-wrapper">
+                                          {Video-700}
+                                      </div>
+                                      {block:Caption}
+                                      <figcaption class="caption">
+                                          {Caption}
+                                      </figcaption>
+                                      {/block:Caption}
+                                  </figure>
+                                  {/block:Video}
+
+                                  {block:Answer}
+                                  <div class="post-content">
+                                      <div class="note-item note-item-asker">
+                                          <div class="text">
+                                              <p class="asker"><strong>{Asker}</strong> asked:</p>
+                                              <div class="asker-question">
+                                                  {Question}
+                                              </div>
+                                          </div>
+                                          <div class="avatar">
+                                              <img class="asker-avatar" src="{AskerPortraitURL-96}" alt="">
+                                          </div>
+                                      </div>
+
+                                      {block:Answerer}
+                                      <div class="note-item note-item-answerer">
+                                          <div class="text">
+                                              <p class="answerer"><strong>{Answerer}</strong> answered:</p>
+                                              <div class="answerer-answer">
+                                                  {Answer}
+                                              </div>
+                                          </div>
+                                          <div class="avatar">
+                                              <img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="">
+                                          </div>
+                                      </div>
+                                      {/block:Answerer}
+
+                                      <div class="replies">
+                                          {Replies}
+                                      </div>
+                                  </div>
+                                  {/block:Answer}
+
+                                  <section class="inline-meta post-extra{block:RebloggedFrom} has-reblog{/block:RebloggedFrom}{block:ContentSource} has-source{/block:ContentSource}{block:HasTags} has-tags{/block:HasTags}">
+                                      {block:RebloggedFrom}
+                                          <a class="meta-item reblog-link" href="{ReblogParentURL}"><i class="icon-reblog"></i>{ReblogParentName}</a>
+                                      {/block:RebloggedFrom}
+                                      {block:ContentSource}
+                                          <a class="meta-item source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
+                                      {/block:ContentSource}
+                                      {block:HasTags}
+                                          {block:Tags}
+                                               <a class="meta-item tag-link" href="{TagURL}">{Tag}</a>
+                                          {/block:Tags}
+                                      {/block:HasTags}
+                                  </section>
+
+                              </section>
+
+                              {block:Date}
+                              <section class="panel">
+                                  <footer class="post-footer">
+                                      <section class="inline-meta date-notes">
+                                          <div class="date-note-wrapper">
+                                              {block:NoteCount}
+                                                  <a href="{Permalink}#notes" class="meta-item post-notes">{NoteCountWithLabel}</a>
+                                              {/block:NoteCount}
+                                          </div>
+                                      </section>
+
+                                      <section class="post-controls">
+                                          <div class="controls-wrapper">
+                                              <div class="control share-control">
+                                                  <nav class="pop">
+                                                      <a href="#" class="share selector icon-export"></a>
+                                                      <div class="pop-menu share-menu south" id="share_{PostID}">
+                                                          <ul>
+                                                              <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">{lang:Open in app}</a></li>
+                                                              <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">{lang:Facebook}</a></li>
+                                                              <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">{lang:Tweet}</a></li>
+                                                              {block:Photo}
+                                                                  <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
+                                                              {/block:Photo}
+                                                              {block:Video}{block:VideoThumbnail}
+                                                                  <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={VideoThumbnailURL}&amp;is_video=true" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
+                                                              {/block:VideoThumbnail}{/block:Video}
+                                                              <li><a href="https://reddit.com/submit?url={URLEncodedPermalink}" class="share-item reddit" target="_blank">{lang:Reddit}</a></li>
+                                                              <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">{lang:Mail}</a></li>
+                                                              <li><a href="{EmbedUrl}" class="share-item permalink">{lang:Embed}</a></li>
+                                                              <li><a href="{Permalink}" class="share-item permalink">{lang:Permalink} <i class="icon-arrow_carrot_right"></i></a></li>
+                                                          </ul>
+                                                      </div>
+                                                  </nav>
+                                              </div>
+                                              <div class="control reblog-control">{ReblogButton size="21" color="black"}</div>
+                                              <div class="control like-control">{LikeButton size="20" color="black"}</div>
+                                          </div>
+                                      </section>
+                                  </footer>
+                              </section>
+                              {/block:Date}
+                          </div>
+                      </article>
+              {/block:Posts}
+              </div>
+              <div class="related-posts-cta content">
+                  <!-- @todo: translate these strings -->
+                  <a class="related-post-cta button bordered open-in-app">{lang:See this in the app}</a>
+                  <a class="related-post-cta see-more button bordered" href="/">{lang:Show more}</a>
+              </div>
+          </section>
+      {/block:RelatedPosts}
+  {/block:IfRelatedPosts}

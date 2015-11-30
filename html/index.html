@@ -14,7 +14,7 @@
       <meta name="description" content="The Dreamer: dreams archive of Trdat Mkrtchyan">
     {/block:Description}
 
-    <!-- Component :: 
+    <!--. Component :: 
           name: metas
           file: html/metas/metas.html ::-->
     {block:Hidden}
@@ -225,7 +225,7 @@
 
         <!--. Component :: 
                 name: nag-close-button
-                file: html/b-app-nag/app-nag-close-button.html:: -->
+                file: html/b-app-nag/app-nag-close-button.html ::-->
         <div class="app-nag-close-button">
           <svg width="15px" height="15px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -458,7 +458,7 @@
                     </header>
                   {/block:RebloggedFrom}
                   
-                  <section class="post">
+                  <section class="b-post post">
                   
                     <!--. Component :: 
                             name: b-post_type_text-block
@@ -663,6 +663,11 @@
                   </section>
 
 
+                  <!--. Compound :: 
+                          name: b-post-date
+                          components: {
+                            compounds: ['date-notes', 'b-post-controls'] 
+                          } ::-->
                   {block:Date}
                     <section class="panel">
                       <footer class="post-footer">
@@ -708,8 +713,19 @@
                           </div>
                         </section>
 
+
+                        <!--. Compound ::
+                                name: b-post-controls,
+                                components: {
+                                  elems: ['share-control', 'reblogs']
+                                } ::-->
                         <section class="post-controls">
                           <div class="controls-wrapper">
+
+
+                            <!--. Component :: 
+                                    name: b-post-footer__share-control
+                                    file: html/b-post-footer/b-post-footer__share-control.html ::-->
                             <div class="control share-control">
                               
                               <nav class="pop">
@@ -733,45 +749,59 @@
                                   </div>
                                 </nav>
 
-                              </div>
-                              <div class="control reblog-control">{ReblogButton size="21" color="black"}</div>
-                              <div class="control like-control">{LikeButton size="20" color="black"}</div>
                             </div>
+
+                            <!--. Component :: 
+                                    name: b-post-footer__reblogs
+                                    file: html/b-post-footer/b-post-footer__reblogs.html ::-->
+                            <div class="control reblog-control">{ReblogButton size="21" color="black"}</div>
+                            <div class="control like-control">{LikeButton size="20" color="black"}</div>
+                          </div>
+                        </section>
+                      </footer>
+                    </section>
+                  {/block:Date}
+
+
+                  <!--. Component :: 
+                          name: b-permalink-page
+                          file: html/b-permalink-page/b-permalink-page.html ::-->
+                  {block:PermalinkPage}
+
+                      {block:Date}
+
+                          {block:IfDisqusShortname}
+                          <section class="comments">
+                              <div id="disqus_thread"></div>
+                              <script type="text/javascript">
+                                (function() {
+                                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                 dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+                                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                })();
+                              </script>
+                              <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+                              <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
                           </section>
-                        </footer>
-                      </section>
-                    {/block:Date}
+                          {/block:IfDisqusShortname}
+
+                      {/block:Date}
+
+                  {/block:PermalinkPage}
+
+                </div>
+              </article>
+            {/block:Posts}
+          </div>
+        </section>
 
 
-                                  {block:PermalinkPage}
-
-                                      {block:Date}
-
-                                          {block:IfDisqusShortname}
-                                          <section class="comments">
-                                              <div id="disqus_thread"></div>
-                                              <script type="text/javascript">
-                                                (function() {
-                                                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                                 dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
-                                                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                                                })();
-                                              </script>
-                                              <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
-                                              <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-                                          </section>
-                                          {/block:IfDisqusShortname}
-
-                                      {/block:Date}
-
-                                  {/block:PermalinkPage}
-                              </div>
-                          </article>
-                  {/block:Posts}
-              </div>
-          </section>
-          {block:IfRelatedPosts}
-              {block:RelatedPosts}
+        <!-- It should be a compound -->
+        <!--. Component :: 
+                name: b-related-posts
+                file: html/b-related-posts/b-related-posts.html ::-->
+        {block:IfRelatedPosts}
+          {block:RelatedPosts}
                   <section class="related-posts-wrapper">
                       <h2>{lang:More you might like}</h2>
                       <div class="related-posts grid">
@@ -1005,24 +1035,34 @@
                           <a class="related-post-cta see-more button bordered" href="/">{lang:Show more}</a>
                       </div>
                   </section>
-              {/block:RelatedPosts}
-          {/block:IfRelatedPosts}
-          <footer id="footer" class="content clearfix">
-              {block:IndexPage}
-                  {block:Pagination}
-                  <div id="pagination">
-                      {block:PreviousPage}
-                      <a href="{PreviousPage}" class="previous" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}">{lang:Previous}<span class="bg"></span></a>
-                      {/block:PreviousPage}
-                      {block:NextPage}
-                      <a href="{NextPage}" class="next" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}">{lang:Next}<span class="bg"></span></a>
-                      {/block:NextPage}
-                      <div class="loader"><div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div></div>
-                  </div>
-                  {/block:Pagination}
-              {/block:IndexPage}
-          </footer>
+            {/block:RelatedPosts}
+        {/block:IfRelatedPosts}
+
+
+        <!--. Component :: 
+                name: b-post__footer
+                file: html/b-post/b-post__footer.html ::-->
+        <footer id="footer" class="content clearfix">
+            {block:IndexPage}
+                {block:Pagination}
+                <div id="pagination">
+                    {block:PreviousPage}
+                    <a href="{PreviousPage}" class="previous" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}">{lang:Previous}<span class="bg"></span></a>
+                    {/block:PreviousPage}
+                    {block:NextPage}
+                    <a href="{NextPage}" class="next" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}">{lang:Next}<span class="bg"></span></a>
+                    {/block:NextPage}
+                    <div class="loader"><div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div></div>
+                </div>
+                {/block:Pagination}
+            {/block:IndexPage}
+        </footer>
+
       </section>
+      
+      <!--. Component :: 
+        name: b-scrips
+        file: html/b-script/b-script.html ::-->
       <script>
           var Optica = {};
           Optica.ENDLESS_SCROLLING = {block:IfEndlessScrolling}true{/block:IfEndlessScrolling}{block:IfNotEndlessScrolling}false{/block:IfNotEndlessScrolling};
