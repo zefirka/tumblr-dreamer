@@ -1,3 +1,14 @@
 .b-post {
-	
+	background: #37194A;
+}
+
+.panel{
+	background: #37194A;
+}
+
+.b-post .post-wrapper {
+	border-radius: 0px;
+	border-radius: 0px;
+    box-shadow: 5px 4px 5px rgba(256,256,256,0.1);
+    color: #C6B0D4;
 }
